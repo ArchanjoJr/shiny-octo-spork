@@ -1,0 +1,17 @@
+---
+# tasks file for repo-install-role
+- name: My-Role | Update and upgrade yum packages
+  yum:
+    name: "*"
+    update_cache: yes
+    state: latest
+
+#- name: add repository
+#  yum-repository:
+#    name: '{{ repo_name }}'
+#    baseurl: '{{ repo_baseurl }}'
+#
+- name: check if all yum dependecies are ok
+  yum:
+    name: '{{ app_yum_dependencies }}'
+    state: present

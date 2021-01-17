@@ -1,0 +1,10 @@
+---
+# defaults file for simple-task
+repo_name: ''
+repo_baseurl: ''
+app_yum_dependencies:
+  - nginx
+  - httpie
+  - python3
+  - gcc-c++
+  - make
